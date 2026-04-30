@@ -3,64 +3,71 @@ import styles from "./page.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+
+<body>
+
+<header>
+  <h1>ReciclaFácil ♻</h1>
+  <p>Aprenda a reciclar corretamente</p>
+</header>
+
+<main>
+
+<section>
+  <h2>Sobre o ReciclaFácil</h2>
+  <p>
+    O ReciclaFácil foi feito para ajudar as pessoas a reciclarem corretamente,
+    trazendo informação simples e acessível para toda a comunidade.
+  </p>
+</section>
+
+<section id="tipos">
+  <h2>Tipos de Reciclagem</h2>
+
+  <section className="cards">
+    <article className="card azul" onclick="filtrarLixeira('papel')">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfuecZ4xBSPsTvepYUtiLirADI7LDluVGgXQ&s" alt="Lixeira azul para papel"/>
+      <section className="info">
+        <h3>Papel</h3>
+        <p>Lixeira Azul</p>
+      </section>
+    </article>
+
+    <article className="card vermelho" onclick="filtrarLixeira('plastico')">
+      <img src="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-vermelho_25030-68449.jpg?semt=ais_hybrid&w=740&q=80" alt="Lixeira vermelha para plástico"/>
+      <section className="info">
+        <h3>Plástico</h3>
+        <p>Lixeira Vermelha</p>
+      </section>
+    </article>
+
+    <article className="card verde" onclick="filtrarLixeira('vidro')">
+      <img src="https://static.vecteezy.com/system/resources/previews/024/089/832/non_2x/green-waste-bin-ecology-free-png.png" alt="Lixeira verde para vidro"/>
+      <section className="info">
+        <h3>Vidro</h3>
+        <p>Lixeira Verde</p>
+      </section>
+    </article>
+
+    <article className="card amarelo" onclick="filtrarLixeira('metal')">
+      <img src="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-amarelo_25030-68159.jpg?semt=ais_hybrid&w=740&q=80" alt="Lixeira amarela para metal"/>
+      <section className="info">
+        <h3>Metal</h3>
+        <p>Lixeira Amarela</p>
+      </section>
+    </article>
+  </section>
+
+  <p id="resultado"></p>
+</section>
+
+</main>
+
+<footer>
+  <p>Felipe de Souza Cassemiro</p>
+  <p>RA: 10735839</p>
+</footer>
+
+</body>
   );
 }
