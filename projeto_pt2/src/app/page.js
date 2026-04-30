@@ -1,4 +1,4 @@
-import styles from "./page.module.css";
+import styles from "./globals.css";
 
 export default function Home() {
   return (
@@ -24,7 +24,7 @@ export default function Home() {
   <h2>Tipos de Reciclagem</h2>
 
   <section className="cards">
-    <article className="card azul" onclick="filtrarLixeira('papel')">
+    <article className="card azul" onClick="filtrarLixeira('papel')">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfuecZ4xBSPsTvepYUtiLirADI7LDluVGgXQ&s" alt="Lixeira azul para papel"/>
       <section className="info">
         <h3>Papel</h3>
@@ -32,7 +32,7 @@ export default function Home() {
       </section>
     </article>
 
-    <article className="card vermelho" onclick="filtrarLixeira('plastico')">
+    <article className="card vermelho" onClick="filtrarLixeira('plastico')">
       <img src="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-vermelho_25030-68449.jpg?semt=ais_hybrid&w=740&q=80" alt="Lixeira vermelha para plástico"/>
       <section className="info">
         <h3>Plástico</h3>
@@ -40,7 +40,7 @@ export default function Home() {
       </section>
     </article>
 
-    <article className="card verde" onclick="filtrarLixeira('vidro')">
+    <article className="card verde" onClick="filtrarLixeira('vidro')">
       <img src="https://static.vecteezy.com/system/resources/previews/024/089/832/non_2x/green-waste-bin-ecology-free-png.png" alt="Lixeira verde para vidro"/>
       <section className="info">
         <h3>Vidro</h3>
@@ -48,7 +48,7 @@ export default function Home() {
       </section>
     </article>
 
-    <article className="card amarelo" onclick="filtrarLixeira('metal')">
+    <article className="card amarelo" onClick="filtrarLixeira('metal')">
       <img src="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-amarelo_25030-68159.jpg?semt=ais_hybrid&w=740&q=80" alt="Lixeira amarela para metal"/>
       <section className="info">
         <h3>Metal</h3>
@@ -61,12 +61,6 @@ export default function Home() {
 </section>
 
 </main>
-
-<footer>
-  <p>Felipe de Souza Cassemiro</p>
-  <p>RA: 10735839</p>
-</footer>
-
 </body>
   );
 }
