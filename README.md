@@ -1,49 +1,49 @@
 # ReciclaFácil – Migração para Next.js
 
 ## Descrição
+O projeto **ReciclaFácil** tem como objetivo auxiliar usuários na correta separação de resíduos recicláveis, oferecendo informações simples e acessíveis sobre o descarte adequado de materiais.
 
-O presente projeto tem como objetivo auxiliar usuários na correta separação de resíduos recicláveis, oferecendo informações simples e acessíveis sobre o descarte adequado de materiais.
-
-Inicialmente desenvolvido utilizando HTML, CSS e JavaScript puro, o sistema foi posteriormente migrado para o framework Next.js, com o intuito de aplicar conceitos modernos de desenvolvimento web.
+Inicialmente desenvolvido utilizando HTML, CSS e JavaScript puro, o sistema foi migrado para o framework **Next.js** com o intuito de aplicar conceitos modernos de desenvolvimento web, como roteamento dinâmico e componentes reutilizáveis.
 
 ---
 
 ## Objetivo
-
-Realizar a migração de uma aplicação estática para uma aplicação baseada em React (Next.js), adaptando a estrutura, o estilo e a lógica de programação para o novo paradigma.
+Realizar a migração de uma aplicação estática para uma aplicação baseada em React (Next.js), adaptando a estrutura, o estilo e a lógica de programação para o novo paradigma de estados e componentes.
 
 ---
 
 ## Estrutura do Projeto
-
-```id="f0v2e1"
+```text
 src/app/
- ├── layout.js
- ├── page.js
- ├── globals.css
-```
+ ├── pesquisar/
+ │    └── page.js      (Página de busca de materiais)
+ ├── layout.js         (Estrutura global: cabeçalho e rodapé)
+ ├── page.js           (Página principal/Home)
+ └── globals.css       (Estilização global unificada)
 
-* **layout.js**: responsável pela estrutura global da aplicação (cabeçalho e rodapé).
-* **page.js**: contém o conteúdo da página principal.
-* **globals.css**: arquivo de estilização global.
+ ## Processo de Migração e Novas Adaptações
 
----
+ Durante a migração, foram realizadas as seguintes adaptações técnicas:
 
-## Processo de Migração
+* Substituição de Estruturas: Arquivos .html foram convertidos em componentes React (.js).
 
-Durante a migração, foram realizadas as seguintes adaptações:
+* Roteamento: Implementação de navegação entre a Home e a nova página de Pesquisa utilizando a estrutura de pastas do Next.js.
 
-* Substituição de arquivos `.html` por componentes React (`.js`);
-* Transferência da estrutura global para o arquivo `layout.js`;
-* Inserção do conteúdo principal no arquivo `page.js`;
-* Conversão de eventos HTML (`onclick`) para eventos React (`onClick`);
-* Substituição da manipulação direta do DOM por controle de estado com `useState`.
+* Gerenciamento de Estado: Substituição da manipulação direta do DOM (como as funções exibirMensagem do projeto anterior) pelo hook useState para controlar os resultados das buscas e filtros em tempo real.
 
----
+
+## Auxílio de IA
+
+O desenvolvimento deste projeto contou com o suporte de Inteligência Artificial Generativa, que atuou como um tutor técnico nas seguintes frentes:
+
+* Refatoração de Código: Auxílio na conversão da lógica imperativa do JavaScript para a lógica declarativa do React.
+
+* Resolução de Erros: Suporte na interpretação de erros de compilação (como erros de default export) e resolução de conflitos de mesclagem no terminal do Git.
 
 ## Funcionalidades
 
-* Exibição de categorias de reciclagem (papel, plástico, vidro e metal);
-* Interação por clique para exibir informações sobre os materiais;
-* Feedback visual dinâmico ao usuário.
+* Categorias de Reciclagem: Cards interativos para papel, plástico, vidro e metal na página inicial.
 
+* Busca Inteligente: Funcionalidade que permite pesquisar por materiais específicos para identificar a lixeira correta.
+
+* Feedback Visual Dinâmico: O sistema altera as cores e mensagens do card de resposta automaticamente conforme o tipo de material identificado pela busca.
