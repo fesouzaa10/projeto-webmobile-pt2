@@ -20,6 +20,7 @@ src/app/
  ├── layout.js         (Estrutura global: cabeçalho e rodapé)
  ├── page.js           (Página principal/Home)
  └── globals.css       (Estilização global unificada)
+ ```
 
  ## Processo de Migração e Novas Adaptações
 
