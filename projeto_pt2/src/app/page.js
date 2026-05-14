@@ -1,3 +1,6 @@
+{/* Nome: Felipe de Souza Cassemiro
+RA: 10735839*/}
+
 "use client";
 import { useState } from "react";
 import { materiaisDB } from "./dados";
@@ -24,7 +27,6 @@ export default function Home() {
       <section id="tipos">
         <h2>Tipos de Reciclagem</h2>
         <div className="cards">
-          {/* Card Azul */}
           <article className="card azul" onClick={() => filtrarLixeira('papel')}>
             <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfuecZ4xBSPsTvepYUtiLirADI7LDluVGgXQ&s" alt="Lixeira azul" />
             <div className="info">
@@ -33,7 +35,6 @@ export default function Home() {
             </div>
           </article>
 
-          {/* Card Vermelho */}
           <article className="card vermelho" onClick={() => filtrarLixeira('plastico')}>
             <img src="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-vermelho_25030-68449.jpg?semt=ais_hybrid&w=740&q=80" alt="Lixeira vermelha" />
             <div className="info">
@@ -42,7 +43,6 @@ export default function Home() {
             </div>
           </article>
 
-          {/* Card Verde */}
           <article className="card verde" onClick={() => filtrarLixeira('vidro')}>
             <img src="https://static.vecteezy.com/system/resources/previews/024/089/832/non_2x/green-waste-bin-ecology-free-png.png" alt="Lixeira verde" />
             <div className="info">
@@ -51,7 +51,6 @@ export default function Home() {
             </div>
           </article>
 
-          {/* Card Amarelo */}
           <article className="card amarelo" onClick={() => filtrarLixeira('metal')}>
             <img src="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-amarelo_25030-68159.jpg?semt=ais_hybrid&w=740&q=80" alt="Lixeira amarela" />
             <div className="info">
