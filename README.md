@@ -14,12 +14,15 @@ Realizar a migração de uma aplicação estática para uma aplicação baseada 
 
 ## Estrutura do Projeto
 ```text
-src/app/
- ├── pesquisar/
- │    └── page.js      (Página de busca de materiais)
- ├── layout.js         (Estrutura global: cabeçalho e rodapé)
- ├── page.js           (Página principal/Home)
- └── globals.css       (Estilização global unificada)
+src/
+ ├── components/       (Componentes reutilizáveis: Header, Footer, Card)
+ ├── app/
+ │    ├── pesquisar/   (Pasta da rota de pesquisa)
+ │    │    └── page.js (Arquivo da página de busca)
+ │    ├── layout.js    (Estrutura global com Header e Footer)
+ │    ├── page.js      (Página inicial com os cards semânticos)
+ │    └── globals.css  (Estilos globais e CSS Flexbox)
+ └────└── dados.js     (Banco de dados mockado dos materiais)
  ```
 
  ## Processo de Migração e Novas Adaptações
@@ -36,10 +39,11 @@ src/app/
 ## Auxílio de IA
 
 O desenvolvimento deste projeto contou com o suporte de Inteligência Artificial Generativa, que atuou como um tutor técnico nas seguintes frentes:
-
-* Refatoração de Código: Auxílio na conversão da lógica imperativa do JavaScript para a lógica declarativa do React.
-
-* Resolução de Erros: Suporte na interpretação de erros de compilação (como erros de default export) e resolução de conflitos de mesclagem no terminal do Git.
+## Uso de Inteligência Artificial Generativa
+O uso de IA neste projeto (Gemini 3 Flash) foi focado em:
+1.  **Refatoração de Componentes**: Orientação para extrair lógica repetitiva do `page.js` para o componente `Card.js`.
+2.  **Melhoria Semântica**: Sugestão de substituição de contêineres `div` por `section` e `article` para melhor legibilidade e SEO.
+3.  **Debug de Layout**: Ajuste de CSS Flexbox para garantir que os cards fiquem alinhados lado a lado após a componentização.
 
 ## Funcionalidades
 
