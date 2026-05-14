@@ -1,31 +1,20 @@
-{/* Nome: Felipe de Souza Cassemiro
-RA: 10735839*/}
+{/* Nome: Felipe de Souza Cassemiro - RA: 10735839 */}
 
 import './globals.css';
-import Link from 'next/link';
+import Header from './components/header';
+import Footer from './components/footer';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br">
       <body>
+        <Header />
+        
+        <main>
+          {children}
+        </main>
 
-        <header>
-          <h1>ReciclaFácil ♻</h1>
-          <p>Aprenda a reciclar corretamente</p>
-
-          <nav>
-            <Link href="/">Início</Link>
-            <Link href="/pesquisar">Pesquisar</Link>
-          </nav>
-        </header>
-
-        {children}
-
-        <footer>
-          <p>Felipe de Souza Cassemiro</p>
-          <p>RA: 10735839</p>
-        </footer>
-
+        <Footer />
       </body>
     </html>
   );

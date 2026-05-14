@@ -24,7 +24,7 @@ export default function Home() {
         <h2>Sobre o ReciclaFácil</h2>
         <p>O ReciclaFácil foi feito para ajudar as pessoas a reciclarem corretamente, trazendo informação simples e acessível.</p>
       </section>
-
+<section className="cards">
       <Card 
   classe="azul" 
   onClick={() => filtrarLixeira('papel')} 
@@ -55,8 +55,9 @@ export default function Home() {
   imgSrc="https://img.freepik.com/vetores-gratis/residuos-de-reciclagem-amarelo_25030-68159.jpg?semt=ais_hybrid&w=740&q=80" 
   altText="Lixeira amarela" 
   titulo="Metal" 
-  subtitulo="Lixeira Amarela" 
-/>
+  subtitulo="Lixeira Amarela"
+  />
+  </section>
         {resultado && (
           <p 
             className="resultado-estilo" 

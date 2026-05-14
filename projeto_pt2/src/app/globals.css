@@ -1,5 +1,4 @@
-/* Nome: Felipe de Souza Cassemiro
-RA: 10735839*/
+/* Nome: Felipe de Souza Cassemiro - RA: 10735839 */
 
 * {
   margin: 0;
@@ -44,6 +43,14 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+footer {
+  background: #2e7d32;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: auto;
+}
+
 main {
   padding: 20px;
   flex: 1;
@@ -60,17 +67,17 @@ h2 {
 
 .cards {
   display: flex;
-  flex-wrap: wrap;         
-  gap: 20px;               
-  justify-content: center;   
-  align-items: flex-start;   
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
   margin-top: 20px;
 }
 
 .card {
   background: white;
   border-radius: 12px;
-  width: 280px;            
+  width: 280px;
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
@@ -78,7 +85,7 @@ h2 {
   gap: 20px;
   transition: 0.3s;
   cursor: pointer;
-  flex: 0 0 auto;          
+  flex: 0 0 auto;
 }
 
 .card:hover {
@@ -95,11 +102,6 @@ h2 {
 .vermelho { border-left: 8px solid #f44336; }
 .verde { border-left: 8px solid #4caf50; }
 .amarelo { border-left: 8px solid #fbc02d; }
-
-.info {
-  display: flex;
-  flex-direction: column;
-}
 
 .info h3 { margin-bottom: 5px; }
 .info p { color: #555; }
@@ -138,29 +140,18 @@ h2 {
   background: #1b5e20;
 }
 
-.resultado-estilo, #resultado {
-  margin: 30px auto;        
-  padding: 20px;            
+.resultado-estilo {
+  margin: 30px auto;
+  padding: 20px;
   background-color: #ffffff;
-  border-radius: 12px;      
+  border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  
   font-weight: bold;
   font-size: 18px;
-  max-width: 450px;         
-  width: 90%;               
+  max-width: 450px;
+  width: 90%;
   text-align: center;
   line-height: 1.6;
-  border-left: 8px solid #2e7d32; 
-  display: block;           
-}
-
-footer {
-  background: #2e7d32;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  margin-top: auto;
 }
 
 @media (max-width: 768px) {
