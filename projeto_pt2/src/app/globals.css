@@ -1,4 +1,5 @@
-/* globals.css */
+/* Nome: Felipe de Souza Cassemiro
+RA: 10735839*/
 
 * {
   margin: 0;
@@ -57,20 +58,19 @@ h2 {
   text-align: center;
 }
 
-/* --- DISPOSIÇÃO DOS CARDS (PÁGINA INICIAL) --- */
 .cards {
   display: flex;
-  flex-wrap: wrap;         /* Permite quebra de linha */
-  gap: 20px;               /* Espaçamento entre cards */
-  justify-content: center;   /* Centraliza o grupo de cards */
-  align-items: flex-start;   /* Alinha todos pelo topo */
+  flex-wrap: wrap;         
+  gap: 20px;               
+  justify-content: center;   
+  align-items: flex-start;   
   margin-top: 20px;
 }
 
 .card {
   background: white;
   border-radius: 12px;
-  width: 280px;            /* Tamanho fixo original */
+  width: 280px;            
   padding: 20px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   display: flex;
@@ -78,7 +78,7 @@ h2 {
   gap: 20px;
   transition: 0.3s;
   cursor: pointer;
-  flex: 0 0 auto;          /* Impede que o card estique */
+  flex: 0 0 auto;          
 }
 
 .card:hover {
@@ -91,7 +91,6 @@ h2 {
   object-fit: contain;
 }
 
-/* Cores das Bordas Laterais */
 .azul { border-left: 8px solid #2196f3; }
 .vermelho { border-left: 8px solid #f44336; }
 .verde { border-left: 8px solid #4caf50; }
@@ -105,7 +104,6 @@ h2 {
 .info h3 { margin-bottom: 5px; }
 .info p { color: #555; }
 
-/* --- ÁREA DE PESQUISA --- */
 .pesquisa {
   text-align: center;
   margin-top: 50px;
@@ -140,30 +138,23 @@ h2 {
   background: #1b5e20;
 }
 
-/* --- AJUSTE DO CARD DE RESPOSTA (PESQUISA) --- */
 .resultado-estilo, #resultado {
-  margin: 30px auto;        /* Centraliza na horizontal */
-  padding: 20px;            /* Espaçamento interno */
+  margin: 30px auto;        
+  padding: 20px;            
   background-color: #ffffff;
-  border-radius: 12px;      /* Mesma curvatura dos outros cards */
+  border-radius: 12px;      
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   
   font-weight: bold;
   font-size: 18px;
-  
-  /* Largura controlada para não virar uma barra longa */
   max-width: 450px;         
   width: 90%;               
-  
   text-align: center;
   line-height: 1.6;
-  
-  /* Borda lateral padrão (será sobrescrita pelo JS/React) */
   border-left: 8px solid #2e7d32; 
   display: block;           
 }
 
-/* --- RODAPÉ --- */
 footer {
   background: #2e7d32;
   color: white;
@@ -172,7 +163,6 @@ footer {
   margin-top: auto;
 }
 
-/* Responsividade para telemóveis */
 @media (max-width: 768px) {
   .search-box {
     flex-direction: column;
