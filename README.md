@@ -1,3 +1,6 @@
+# Nome: Felipe de Souza Cassemiro
+# RA: 10735839
+
 # ReciclaFácil – Migração para Next.js
 
 ## Descrição

@@ -1,4 +1,5 @@
-{/* Nome: Felipe de Souza Cassemiro - RA: 10735839 */}
+{/* Nome: Felipe de Souza Cassemiro
+RA: 10735839 */}
 
 import './globals.css';
 import Header from './components/header';

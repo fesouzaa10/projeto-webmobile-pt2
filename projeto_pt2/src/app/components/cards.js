@@ -1,4 +1,5 @@
-{/* Nome: Felipe de Souza Cassemiro - RA: 10735839 */}
+{/* Nome: Felipe de Souza Cassemiro
+RA: 10735839 */}
 
 export default function Card({ classe, onClick, imgSrc, altText, titulo, subtitulo }) {
   return (
