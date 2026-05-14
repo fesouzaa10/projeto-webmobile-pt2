@@ -1,3 +1,6 @@
+{/* Nome: Felipe de Souza Cassemiro
+RA: 10735839*/}
+
 export const materiaisDB = [
   { nome: "Jornal", categoria: "papel", cor: "#2196f3", msg: "AZUL" },
   { nome: "Revista", categoria: "papel", cor: "#2196f3", msg: "AZUL" },

@@ -1,7 +1,7 @@
+"use client";
 {/* Nome: Felipe de Souza Cassemiro
 RA: 10735839*/}
 
-"use client";
 import { useState } from "react";
 import { materiaisDB } from "./dados";
 
