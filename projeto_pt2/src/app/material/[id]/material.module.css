@@ -37,13 +37,7 @@ RA: 10735839 */
 }
 
 .linkVoltar {
-  display: inline-block;
   margin-top: 25px;
   color: #666;
-  text-decoration: none;
   font-weight: 500;
-}
-
-.linkVoltar:hover {
-  text-decoration: underline;
 }
