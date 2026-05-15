@@ -1,0 +1,49 @@
+/* Nome: Felipe de Souza Cassemiro
+RA: 10735839 */
+
+.container {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.titulo {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.info {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #444;
+}
+
+.caixaCor {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 10px auto;
+  border: 2px solid #ddd;
+}
+
+.linkVoltar {
+  display: inline-block;
+  margin-top: 25px;
+  color: #666;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.linkVoltar:hover {
+  text-decoration: underline;
+}
