@@ -1,36 +1,26 @@
 'use client';
 
-{/* Nome: Felipe de Souza Cassemiro
-RA: 10735839 */}
+/* Nome: Felipe de Souza Cassemiro
+   RA: 10735839 */
 
 import { useState } from 'react';
+import Link from 'next/link';
+import { materiaisDB } from '../dados'; // Importando do arquivo central
 
 export default function Pesquisar() {
   const [busca, setBusca] = useState('');
   const [resultado, setResultado] = useState(null);
-
-  const materiaisDB = [
-    { nome: "Jornal", categoria: "papel", cor: "#2196f3", msg: "AZUL" },
-    { nome: "Revista", categoria: "papel", cor: "#2196f3", msg: "AZUL" },
-    { nome: "Papelão", categoria: "papel", cor: "#2196f3", msg: "AZUL" },
-    { nome: "Garrafa PET", categoria: "plástico", cor: "#f44336", msg: "VERMELHA" },
-    { nome: "Sacola", categoria: "plástico", cor: "#f44336", msg: "VERMELHA" },
-    { nome: "Pote", categoria: "plástico", cor: "#f44336", msg: "VERMELHA" },
-    { nome: "Garrafa de Vidro", categoria: "vidro", cor: "#4caf50", msg: "VERDE" },
-    { nome: "Pote de Vidro", categoria: "vidro", cor: "#4caf50", msg: "VERDE" },
-    { nome: "Lata de Alumínio", categoria: "metal", cor: "#fbc02d", msg: "AMARELA" },
-    { nome: "Lata de Aço", categoria: "metal", cor: "#fbc02d", msg: "AMARELA" }
-  ];
 
   const handlePesquisa = (e) => {
     e.preventDefault();
     const valor = busca.toLowerCase().trim();
 
     if (valor === "") {
-      setResultado({ texto: "Digite um material!", cor: "#333" });
+      setResultado({ texto: "Digite um material!", cor: "#333", link: null });
       return;
     }
 
+    // Busca mais flexível: procura no nome ou na categoria
     const achado = materiaisDB.find(m =>
       m.nome.toLowerCase().includes(valor) || 
       m.categoria.toLowerCase().includes(valor)
@@ -39,10 +29,11 @@ export default function Pesquisar() {
     if (achado) {
       setResultado({
         texto: `Descarte na lixeira ${achado.msg} (${achado.categoria})`,
-        cor: achado.cor
+        cor: achado.cor,
+        nomeReal: achado.nome // Nome exato para o link funcionar
       });
     } else {
-      setResultado({ texto: "Material não encontrado.", cor: "#777" });
+      setResultado({ texto: "Material não encontrado.", cor: "#777", link: null });
     }
   };
 
@@ -54,7 +45,7 @@ export default function Pesquisar() {
         <form className="search-box" onSubmit={handlePesquisa}>
           <input 
             type="text" 
-            placeholder="Digite um material..." 
+            placeholder="Ex: Papel, Garrafa, Jornal..." 
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
           />
@@ -62,16 +53,34 @@ export default function Pesquisar() {
         </form>
 
         {resultado && (
-          <p 
+          <div 
             className="resultado-estilo" 
             style={{ 
               color: resultado.cor, 
-              borderLeftColor: resultado.cor,
-              backgroundColor: resultado.cor + "11" 
+              borderLeft: `5px solid ${resultado.cor}`,
+              backgroundColor: resultado.cor + "11",
+              padding: "15px",
+              marginTop: "20px",
+              borderRadius: "8px"
             }}
           >
-            {resultado.texto}
-          </p>
+            <p><strong>{resultado.texto}</strong></p>
+            
+            {resultado.nomeReal && (
+              <Link 
+                href={`/material/${encodeURIComponent(resultado.nomeReal)}`}
+                style={{
+                  display: "block",
+                  marginTop: "10px",
+                  textDecoration: "underline",
+                  color: resultado.cor,
+                  fontWeight: "bold"
+                }}
+              >
+                Clique aqui para ver detalhes de como reciclar {resultado.nomeReal}
+              </Link>
+            )}
+          </div>
         )}
       </section>
     </main>
